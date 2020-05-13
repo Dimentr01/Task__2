@@ -66,8 +66,8 @@ void split(char* buff)
 
 	string s1, s2;
 
+	
 	int prevCounter = counter / 2;
-	string* main = new string[counter];
 
 	bool firstFileEnd = false;
 	bool secondFileEnd = false;
@@ -83,6 +83,9 @@ void split(char* buff)
 		if (firstFileEnd && secondFileEnd)
 			break;
 
+		partsInFirstFile = 0;
+		partsInSecondFile = 0;
+
 		// считали первую порцию данных
 		for (int i = 0; i < prevCounter; i++)
 		{
@@ -94,10 +97,7 @@ void split(char* buff)
 					stroki_1[i] = s1;
 					partsInFirstFile++;
 				}
-				else
-				{
-					firstFileEnd = true;
-				}
+				
 			}
 			else
 			{
@@ -112,10 +112,7 @@ void split(char* buff)
 					stroki_2[i] = s2;
 					partsInSecondFile++;
 				}
-				else
-				{
-					secondFileEnd = true;
-				}
+				
 			}
 			else
 			{
@@ -135,6 +132,7 @@ void split(char* buff)
 			{
 				break;
 			}
+
 			else if (i == prevCounter)
 			{
 				if(!stroki_2[j].empty())
@@ -170,7 +168,6 @@ void split(char* buff)
 	file_2.close();
 	glavfile.close();
 
-	delete[] main;
 
 	merge(buff);
 }
