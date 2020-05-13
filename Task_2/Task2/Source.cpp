@@ -103,7 +103,7 @@ void split(char* buff)
 			{
 				firstFileEnd = true;
 			}
-			// если во втором элементов меньше 
+			
 			if (!file_2.eof())
 			{
 				getline(file_2, s2);
