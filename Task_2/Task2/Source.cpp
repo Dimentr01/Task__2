@@ -180,19 +180,13 @@ int main()
 {
 	setlocale(0, "Russian");
 	char buff[50];
-	/* cout << "Введите название файла ";
+	 cout << "Введите название файла ";
 	 cin.getline(buff, 50);
 	ifstream proverka(buff);
 	if (!proverka)
 	{
 		cout << "Can`t open file " << buff << std::endl;
 	}
-	else merge(buff);*/
-	string s1 = "aa", s2 = "b";
- int key = 1;
- if (s1 < s2)
-	 key = 1;
- else key = 2;
- cout<< key;
-
+	else merge(buff);
+	
 }
