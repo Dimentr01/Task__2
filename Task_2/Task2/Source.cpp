@@ -120,7 +120,7 @@ void split(char* buff)
 			}
 		}
 
-		if (firstFileEnd && secondFileEnd)
+		if (partsInSecondFile == 0 && partsInFirstFile == 0)
 			break;
 
 		// сливаем считанные preCounter элементов
